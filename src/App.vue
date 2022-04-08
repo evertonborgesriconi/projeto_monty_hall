@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Poblema Monty Hall</h1>
+  <Door :number="1" :hasGift="true" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Door from './components/Door.vue'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { Door },
+};
 </script>
 
 <style>
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  color: #fff;
+  background: linear-gradient(to left, #aa4b6b, #6b6b83, #3b8d99);
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#app h1 {
+  border: 1px solid black;
+  background-color: #0004;
+  padding: 20px;
+  margin-bottom: 60px;
 }
 </style>
